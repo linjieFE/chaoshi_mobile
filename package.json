@@ -1,0 +1,25 @@
+{
+  "name": "chaoshi",
+  "version": "1.0.0",
+  "description": "金融超市移动端",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -a 0.0.0.0 -p 8000 -c-1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^0.8.5"
+  },
+  "dependencies": {
+    "http-server": "^0.8.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeapple886/chaoshi_moblie1218.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yeapple886/chaoshi_moblie1218/issues"
+  },
+  "homepage": "https://github.com/yeapple886/chaoshi_moblie1218#readme"
+}

@@ -1,0 +1,419 @@
+            @import url(base.less);
+            @color: #333;
+            @colorbg: #fff;
+            @colorActive: #f60;
+            @fontSmall: 14px;
+            @t_color01: #5aba85;
+            @t_color02: #6295ea;
+            @t_color03: #62d8b6;
+            @t_color04: #a98fdb;
+            @t_fund_t01: #ee5646;
+            @t_fund_t02: #b173dc;
+            @t_fund_t03: #dcb373;
+            @t_fund_t04: #ff8e50;
+            @t_fund_t05: #6d93e1;
+            @w_100: 100%;
+            @bdr_color: #dadada;
+            @bdr_color2: #ccc;
+            @fontColor: #999;
+            .flexboxtype {
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: -webkit-box;
+                display: flex;
+            }
+            
+            .flexboxone {
+                -webkit-box-flex: 1;
+                /* OLD - iOS 6-, Safari 3.1-6 */
+                -moz-box-flex: 1;
+                -moz-flex: 1;
+                -ms-flex: 1;
+                -webkit-flex: 1;
+                flex: 1;
+            }
+            
+            .titleName(@title-color) {
+                background: @colorbg;
+                strong {
+                    display: block;
+                    border-left: 4px solid @title-color;
+                    padding-left: 5px;
+                    height: 40px;
+                    line-height: 40px;
+                }
+                font-size: @fontSmall+2;
+                border-bottom: 1px solid @bdr_color;
+                .more {
+                    float: right;
+                    font-size: @fontSmall+2;
+                    color: @color*3;
+                    margin-top: -29px;
+                    margin-right: 10px;
+                    a {
+                        color: @color*3;
+                    }
+                }
+            }
+            
+            .boxCon {
+                margin-bottom: 1.5em;
+                background-color: @colorbg;
+                border-bottom: 1px solid @bdr_color2;
+                .bank_diff {
+                    text-align: left;
+                    padding: 0 1em;
+                }
+                .prod_list {
+                    .kind_title {
+                        border-top: 1px solid @bdr_color;
+                        padding: 0 1em;
+                        h3 {
+                            font-size: @fontSmall+2;
+                            color: @color;
+                            padding: 23px 0 16px;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: pre;
+                            .mark {
+                                float: right;
+                                color: #4a90e2;
+                                font-size: @fontSmall;
+                                padding-top: 1px;
+                            }
+                            .article {
+                                width: 80%;
+                            }
+                            .ico_hot,
+                            .ico_choose {
+                                margin-left: 0.2em;
+                                color: @colorbg;
+                                font-size: @fontSmall*0.86;
+                                padding: .2em .3em;
+                                display: inline-block;
+                                vertical-align: top;
+                            }
+                            .ico_hot {
+                                background: red;
+                            }
+                            .ico_choose {
+                                background: @colorActive;
+                            }
+                            em {
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                display: inline-block;
+                            }
+                        }
+                        h3.nopre {
+                            white-space: normal;
+                        }
+                        .kind_mark {
+                            padding-bottom: 2px;
+                            font-size: 0;
+                            margin-top: -6px;
+                            img {
+                                padding-right: .4rem;
+                            }
+                            span {
+                                padding: 2px 3px;
+                                color: @colorbg;
+                                font-size: @fontSmall*0.86;
+                                &:nth-of-type(1) {
+                                    background: @colorActive;
+                                    margin-right: .5em;
+                                }
+                                &:nth-of-type(2) {
+                                    background: red;
+                                }
+                            }
+                        }
+                        p {
+                            font-size: (@fontSmall/2)+6;
+                            color: @color*3;
+                            padding-bottom: 20px;
+                            text-align: center;
+                        }
+                        .pb10 {
+                            padding-bottom: 10px;
+                        }
+                        .pb0 {
+                            padding-bottom: 6px;
+                        }
+                        .lux_count {
+                            font-size: @fontSmall*2+6;
+                            color: @colorActive;
+                            padding: 5px 0 9px 0;
+                            text-align: center;
+                        }
+                    }
+                    a:first-child .kind_title {
+                        border-top: none;
+                        margin-top: 0;
+                        // h3 {
+                        //     padding-top: 1em;
+                        // }
+                    }
+                    /* .kind_diff {
+                        border-top: 1px solid @bdr_color;
+                        margin-top: 1em;
+                    } */
+                    ul.kind_list {
+                        .flexboxtype();
+                        padding-bottom:8px;
+                        // display: flex;
+                        // flex-flow: row;
+                        // align-items: stretch;
+                        // justify-content: space-around;
+                        // -webkit-display: flex;
+                        // -webkit-align-items: stretch;
+                        // -webkit-flex-flow: row;
+                        // -webkit-justify-content: space-around;
+                        li {
+                            -webkit-box-flex: 1;
+                            /* OLD - iOS 6-, Safari 3.1-6 */
+                            -moz-box-flex: 1;
+                            width: @w_100/2;
+                            -moz-flex: 1;
+                            -ms-flex: 1;
+                            -webkit-flex: 1;
+                            flex: 1;
+                            padding: 10px 0;
+                            .flexboxone();
+                            em {
+                                color: @colorActive;
+                                font-size: @fontSmall+4;
+                                padding-left: 6px;
+                            }
+                            .pl0 {
+                                padding-left: 0px;
+                            }
+                            .lucount {
+                                color: @color;
+                            }
+                            p {
+                                color: @fontColor;
+                            }
+                        }
+                        .bankloan p:first-child {
+                            padding-bottom: 6px;
+                            height: 28px;
+                            line-height: 28px;
+                        }
+                        .bankloan:nth-of-type(1) {
+                            -webkit-box-flex: 3;
+                            /* OLD - iOS 6-, Safari 3.1-6 */
+                            -moz-box-flex: 3;
+                            -moz-flex: 3;
+                            -ms-flex: 3;
+                            -webkit-flex: 3;
+                            flex: 3;
+                            width: 30%;
+                            border: none;
+                        }
+                        .bankloan:nth-of-type(2) {
+                            -webkit-box-flex: 4;
+                            /* OLD - iOS 6-, Safari 3.1-6 */
+                            -moz-box-flex: 4;
+                            -moz-flex: 4;
+                            -ms-flex: 4;
+                            -webkit-flex: 4;
+                            flex: 4;
+                            width: 30%;
+                        }
+                        .bankloan:nth-of-type(3) {
+                            -webkit-box-flex: 4;
+                            /* OLD - iOS 6-, Safari 3.1-6 */
+                            -moz-box-flex: 4;
+                            -moz-flex: 4;
+                            -ms-flex: 4;
+                            -webkit-flex: 4;
+                            flex: 4;
+                            width: 40%;
+                        }
+                        li:first-child {
+                            border-right: 1px solid @bdr_color;
+                            /*padding-left: 2em; */
+                        }
+                    }
+                    ul.hotfundDiff li:first-child {
+                        border-right: none
+                    }
+                    text-align: center;
+                }
+            }
+            
+            .mod_ {
+                &bankloan,
+                &insurance {
+                    display: none;
+                }
+                &mod_inverst .kind_title {
+                    border-top: none;
+                    margin-top: 0
+                }
+                &nav {
+                    background: @colorbg;
+                    margin: 0 auto;
+                    height: 3.5em;
+                    text-align: center;
+                    .flexboxtype();
+                    //justify-content: space-around;
+                    //align-items: center; //Safari 不支持 align-items 属性
+                    //-webkit-display: flex;
+                    //-webkit-justify-content: space-around;
+                    //-webkit-align-items: center;
+                    .clearfix();
+                    li {
+                        width: @w_100/3;
+                        .flexboxone();
+                        padding-top: 0.7em;
+                        color: @color;
+                        font-size: @fontSmall+2;
+                        padding: 15px 0px;
+                    }
+                    .current {
+                        color: @colorActive;
+                        border-bottom: 2px solid @colorActive;
+                    }
+                }
+                &banner {
+                    font-size: 0;
+                    background: @colorActive;
+                    position: relative;
+                    ul.point {
+                        padding-top: 120px;
+                        text-align: center;
+                        position: absolute;
+                        bottom: 3%;
+                        left: 45%;
+                        width: inherit;
+                        li {
+                            width: 8px;
+                            height: 8px;
+                            display: inline-block;
+                            cursor: pointer;
+                            border-radius: 50%;
+                            margin-right: 5px;
+                            background: rgba(255, 255, 255, .5);
+                        }
+                        img {
+                            float: left;
+                        }
+                        .curr,
+                        .swiper-pagination-bullet-active {
+                            background: rgba(255, 255, 255, 1)
+                        }
+                    }
+                }
+                &insurance_car {
+                    background-color: #ededed;
+                    margin-bottom: 1.5em;
+                    border-bottom: 1px solid @bdr_color2;
+                    h2 {
+                        .titleName(@t_color01);
+                    }
+                    dl.insur_list {
+                        position: relative;
+                        width: 100%;
+                        border-bottom: 1px solid @bdr_color;
+                        background: @colorbg;
+                        dt,
+                        dd {
+                            display: inline-block;
+                            padding: 1em .5em;
+                        }
+                        dd p {
+                            font-size: @fontSmall;
+                        }
+                        dd strong {
+                            font-size: @fontSmall+2;
+                            color: @color;
+                            padding-bottom: .5em;
+                            display: block;
+                        }
+                    }
+                    a:last-child dl {
+                        border-bottom: none;
+                    }
+                    .more {
+                        position: absolute;
+                        right: 1em;
+                        top: 40%;
+                    }
+                }
+                &travel {
+                    h2 {
+                        .titleName(@t_color02);
+                    }
+                }
+                &education {
+                    h2 {
+                        .titleName(@t_color03);
+                    }
+                }
+                &disease {
+                    h2 {
+                        .titleName(@t_color04);
+                    }
+                }
+                &hot_fund,
+                &loan_prod {
+                    h2 {
+                        .titleName(@t_fund_t01);
+                    }
+                }
+                &lufax {
+                    h2 {
+                        .titleName(@t_fund_t02);
+                    }
+                }
+                &huge,
+                &loan_mortgage {
+                    h2 {
+                        .titleName(@t_fund_t03);
+                    }
+                }
+                &banking,
+                &loan_online {
+                    h2 {
+                        .titleName(@t_fund_t04);
+                    }
+                }
+                &house {
+                    h2 {
+                        .titleName(@t_fund_t05);
+                    }
+                }
+                &hot_fund {
+                    .prod_list {
+                        text-align: left;
+                        .kind_title {
+                            .kind_mark {
+                                margin-top: 0px;
+                            }
+                            h3 {
+                                padding: 15px 0 10px;
+                            }
+                        }
+                        ul.kind_list li {
+                            text-align: center;
+                            em {
+                                font-size: @fontSmall+10;
+                                padding-bottom: 6px;
+                                display: block;
+                            }
+                            .net_value {
+                                //font-size: @fontSmall/2+4
+                            }
+                        }
+                    }
+                }
+                &more {
+                    padding: 1em 0;
+                    text-align: center;
+                    background: @colorbg;
+                }
+            }
